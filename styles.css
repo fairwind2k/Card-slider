@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Sofia&effect=|outline|emboss');
+
+
+@media (max-width: 600px) {
+	html {
+		font-size: 16px;
+	}
+}
+@media (min-width: 600px) and (max-width: 1200px) {
+	html {
+		font-size: 20px;
+	}
+}
+
+@media (min-width: 1200px) {
+	html {
+		font-size: 30px;
+	}
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Sofia", sans-serif;
+  overflow: hidden;
+  margin: 0;
+  background:#E0B589;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  padding: 0 20px;
+}
+
+.slide {
+  height: 80vh;
+  border-radius: 20px;
+  margin: 10px;
+  cursor: pointer;
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  transition: all 500ms ease-in-out;
+
+}
+
+.slide h3 {
+  position: absolute;
+  /* font-size: 30px; */
+  font-size: 1.5rem;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  /* writing-mode: vertical-rl; */
+  opacity: 0;
+}
+
+.slide.active {
+  flex: 10;
+}
+
+.slide.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
